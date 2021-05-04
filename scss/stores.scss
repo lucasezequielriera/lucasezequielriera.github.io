@@ -756,50 +756,17 @@ html {
         background-color: rgb(212, 212, 212);
         color: black;
     }
-}
 
-//--------- Temario Section ---------//
-#temario {
-    width: 90%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-
-    h1 {
-        font-size: 42px;
-        font-weight: 200;
-
-        span {
-            background-color: rgb(255, 0, 98);
-            color: white;
-        }
-    }
-
-    h6 {
-        a {
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 13px;
-            margin-top: 10px;
-            color: rgb(80, 80, 80);
-            background-color: rgb(216, 216, 216);
-            padding: 3px 10px;
-            transition: all .2s;
-        }
-
-        a:hover {
-            background-color: rgb(119, 119, 119);
-            color: white;
-        }
-    }
-    ul {
-        margin-top: 50px;
-        li {
-            text-align: left;
-            font-weight: 300;
-            margin: 5px;
+    .modal {
+        .modal-content {
+            .modal-body {
+                #temario {
+                    padding: 0px 0px;
+                    list-style: none;
+                    text-align: left;
+                    margin: 0px;
+                }
+            }
         }
     }
 }

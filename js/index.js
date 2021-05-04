@@ -190,10 +190,6 @@ function cerrarSesion(e) {
         });
 }
 
-// Inicializar función para que no se sobreescriba con los datos anteriores en el array "clientes" //
-cargarClientesDeLocalStorage();
-mostrarSesion();
-
 // Animación en Logo //
 const logotooeshop = $('#mostrarLogo');
 
@@ -238,3 +234,7 @@ formContacto.addEventListener("submit", function(e) {
     e.preventDefault();
     alert("Todo perfecto, mensaje enviándose...");
 });
+
+// Inicializar función para que no se sobreescriba con los datos anteriores en el array "clientes" //
+cargarClientesDeLocalStorage();
+mostrarSesion();

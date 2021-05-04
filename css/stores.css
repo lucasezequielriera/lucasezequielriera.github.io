@@ -646,44 +646,11 @@ html {
   background-color: #d4d4d4;
   color: black;
 }
-
-#temario {
-  width: 90%;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
-  background-color: white;
-}
-#temario h1 {
-  font-size: 42px;
-  font-weight: 200;
-}
-#temario h1 span {
-  background-color: #ff0062;
-  color: white;
-}
-#temario h6 a {
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: 10px;
-  color: #505050;
-  background-color: #d8d8d8;
-  padding: 3px 10px;
-  transition: all 0.2s;
-}
-#temario h6 a:hover {
-  background-color: #777777;
-  color: white;
-}
-#temario ul {
-  margin-top: 50px;
-}
-#temario ul li {
+#productos .modal .modal-content .modal-body #temario {
+  padding: 0px 0px;
+  list-style: none;
   text-align: left;
-  font-weight: 300;
-  margin: 5px;
+  margin: 0px;
 }
 
 #descripcion {

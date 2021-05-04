@@ -204,11 +204,6 @@ botonMediosDePago.addEventListener('click', () => {
     botonDescripcion.classList.remove('activate');
 });
 
-// Al pasar cambia el estilo de los botones //
-window.onscroll = function(e) {
-    let element = document.querySelector
-}
-
 // AJAX //
 
 // Inicializar función AJAX al abrir pantalla // 
@@ -243,6 +238,7 @@ function crearProducto() {
     Card.push({"nombre": nombre, "categoria": categoria, "descripcion": descripcion, "boton": boton, "precio": precio});
 }
 
+// Mostrar los productos en HTML //
 function mostrarProductos() {
     const productosDisponibles = document.getElementById("productos_disponibles");
     const botonVerMas = document.querySelector("#botonVerMas");
@@ -258,7 +254,7 @@ function mostrarProductos() {
                     <h6 class="card-subtitle">${value.categoria}</h6>
                     <hr>
                     <p class="card-text">${value.descripcion}</p>
-                    <button type="button" class="btn btn-success card-button first-button" data-bs-toggle="modal" data-bs-target="#exampleModal${index}">${value.boton}</button>
+                    <button type="button" class="btn btn-success card-button first-button" data-bs-toggle="modal" data-bs-target="#exampleModal">${value.boton}</button>
                     <a href="" class="btn card-button">Comprar</a>
                     <p class="card-bottom"><span>$${value.precio}</span> Pesos Argentinos</p>
                 </div>
@@ -278,15 +274,15 @@ function mostrarProductos() {
             botonVerMas.textContent = "Ver Menos";
             Card.forEach(function (value, index) {
                 productosDisponibles.innerHTML +=
-                    `<div class="card totalPoductos">
-                    <div class="image_product"><img src="${value.imagen}" width="300px" height="150px"></div>
+                    `<div class="card pocosProductos">
+                    <div class="image_product"><img src="${value.imagen}"></div>
                     <div class="card-body">
                         <h5 class="card-title">${value.nombre}</h5>
                         <h6 class="card-subtitle">${value.categoria}</h6>
                         <hr>
                         <p class="card-text">${value.descripcion}</p>
-                        <a href="#animatedModal" id="demo" class="btn btn-success card-button first-button">${value.boton}</a>
-                        <a href="#" class="btn card-button">Comprar</a>
+                        <button type="button" class="btn btn-success card-button first-button" data-bs-toggle="modal" data-bs-target="#exampleModal">${value.boton}</button>
+                        <a href="" class="btn card-button">Comprar</a>
                         <p class="card-bottom"><span>$${value.precio}</span> Pesos Argentinos</p>
                     </div>
                 </div>`
@@ -299,14 +295,14 @@ function mostrarProductos() {
             Card.some(function (value, index) {
                 productosDisponibles.innerHTML +=
                     `<div class="card pocosProductos">
-                    <div class="image_product"><img src="${value.imagen}" width="300px" height="150px"></div>
+                    <div class="image_product"><img src="${value.imagen}"></div>
                     <div class="card-body">
                         <h5 class="card-title">${value.nombre}</h5>
                         <h6 class="card-subtitle">${value.categoria}</h6>
                         <hr>
                         <p class="card-text">${value.descripcion}</p>
-                        <a href="#animatedModal" id="demo" class="btn btn-success card-button first-button">${value.boton}</a>
-                        <a href="#" class="btn card-button">Comprar</a>
+                        <button type="button" class="btn btn-success card-button first-button" data-bs-toggle="modal" data-bs-target="#exampleModal">${value.boton}</button>
+                        <a href="" class="btn card-button">Comprar</a>
                         <p class="card-bottom"><span>$${value.precio}</span> Pesos Argentinos</p>
                     </div>
                 </div>`
@@ -316,10 +312,6 @@ function mostrarProductos() {
             });
         }
     })
-}
-
-function modal() {
-    
 }
 
 // Inicializar función para mostrar los productos en HTML //
