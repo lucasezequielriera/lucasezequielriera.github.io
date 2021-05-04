@@ -1,0 +1,1072 @@
+//// Colours ////
+$rosa-claro: rgb(253, 235, 246);
+$azul: rgb(0, 89, 255);
+$rosa: rgb(255, 0, 98);
+/////////////////
+
+// Classes //
+.activate {
+    border-bottom: 2px solid deeppink;
+}
+
+.active {
+    background-color: $rosa !important;
+    color: white !important;
+}
+
+// Keyframes //
+@keyframes mostrarLogo {
+    0% {
+        transform: translateX(-150px);
+    }
+
+    100% {
+        transform: translateX(17px);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'system-ui';
+}
+
+///////////////////////////////////////////// ESCUELAS IADE /////////////////////////////////////////////
+//------- Static Buttons Section -------//
+
+#botones_estaticos {
+    position: fixed;
+    z-index: 10;
+    writing-mode: vertical-rl;
+    left: 0px;
+    padding: 3px 5px 7px 2px;
+    border-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.856);
+    bottom: 0;
+    text-align: center;
+    transform: translateX(-30px);
+    transition: all .2s;
+
+    a {
+        padding-right: 15px;
+        text-decoration: none;
+        font-weight: 400;
+        color: white;
+        letter-spacing: 2px;
+    }
+
+    .redes {
+        padding-right: 5px;
+
+        .facebook {
+            width: 25px;
+            margin-top: 5px;
+        }
+
+        .instagram {
+            width: 25px;
+            margin-top: 5px;
+        }
+
+        .pinterest {
+            width: 22px;
+            margin-top: 5px;
+        }
+
+        .twitter {
+            width: 21px;
+            margin-top: 5px;
+        }
+
+        .youtube {
+            width: 24px;
+            margin-top: 5px;
+        }
+    }
+}
+
+#botones_estaticos:hover {
+    transform: translateX(0px);
+}
+
+//------- Navbar Section -------//
+
+#navbar {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.877);
+    display: flex;
+    padding: 0px 0px 0px 5px;
+    color: white;
+    box-shadow: 0px 0px 10px black;
+
+    .mostrarLogo {
+        align-self: center;
+
+        .icono_tooeshop {
+            width: 37px;
+            height: 37px;
+            align-self: center;
+            border-radius: 50px;
+            background-image: url("../escuelasiade/iconos/tooeshop.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 55px;
+            padding: 5px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .icono_tooeshop:hover {
+            filter: opacity(0.8);
+            transition: all .2s;
+        }
+    }
+
+    .mostrarLogo:hover::after {
+        content: 'Volver a tooEshop';
+        position: absolute;
+        color: white;
+        z-index: 9;
+        font-size: 16px;
+        padding: 5px 10px 5px 30px;
+        background-color: rgba(0, 0, 0, 0);
+        top: 0;
+        align-self: center;
+        animation: mostrarLogo .2s linear forwards;
+        margin-top: 7px;
+        font-weight: 300;
+    }
+
+    .pestañas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+
+        a {
+            font-weight: 300;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+            padding: 15px 15px;
+            transition: all .2s;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.267);
+        }
+    }
+
+    .navbarOff {
+        display: flex;
+        justify-content: end;
+        margin-left: auto;
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 10px;
+            transition: all .2s;
+            letter-spacing: 1px;
+            font-size: 14px;
+            align-self: center;
+            height: 100%;
+            font-weight: 300;
+            text-transform: uppercase;
+            flex: auto;
+            white-space: nowrap;
+
+            img {
+                width: 20px;
+                margin-right: 2px;
+                vertical-align: bottom;
+            }
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.219);
+        }
+
+        a:active {
+            font-size: 12px;
+        }
+    }
+
+    .perfil {
+        display: flex;
+        justify-content: end;
+        margin-left: auto;
+
+        p {
+            position: absolute;
+            right: 53px;
+            top: 16px;
+            font-weight: 300;
+            font-size: 13px;
+            letter-spacing: 0.2px;
+        }
+
+        .perfil_usuario {
+            width: 37px;
+            height: 37px;
+            background-color: white;
+            border-radius: 50px;
+            background-image: url("../escuelasiade/perfil.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px solid transparent;
+            align-self: center;
+            margin-right: 5px;
+
+            .button_verPerfil {
+                width: 135px;
+                height: 37px;
+                border: 1px solid deeppink;
+                border-radius: 50px;
+                margin-right: 2px;
+                position: absolute;
+                top: 7px;
+                right: 3px;
+                background-color: transparent;
+            }
+
+            .button_verPerfil:focus {
+                box-shadow: none;
+            }
+
+            .button_verPerfil:hover {
+                background-color: rgba(0, 0, 0, 0.274);
+            }
+
+            .button_verPerfil:active {
+                background-color: rgba(255, 20, 145, 0.164);
+            }
+
+            .offcanvas {
+                width: 300px;
+                background-color: rgb(255, 255, 255);
+
+                .offcanvas-header {
+                    color: black;
+                    align-items: center;
+                    box-shadow: 0px 5px 2px rgb(233, 233, 233);
+
+                    .profile_cover {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50px;
+                        margin-left: -5px;
+                        margin-right: 10px;
+                        background-image: url("../escuelasiade/perfil.jpeg");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border: 2px solid rgb(75, 75, 75);
+                    }
+
+                    .profile_data {
+                        h5 {
+                            font-weight: 400;
+                        }
+
+                        h6 {
+                            font-weight: 400;
+                            font-size: 13px;
+                            color: dimgray;
+                        }
+                    }
+
+                    h5 {
+                        margin: 0px;
+                        font-weight: 400;
+                    }
+                }
+
+                hr {
+                    color: black;
+                    width: 90%;
+                    margin: auto;
+                }
+
+                .offcanvas-body {
+                    width: 110%;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    padding: 15px 9px;
+                    font-weight: 300;
+                    font-size: 15px;
+                    background-color: rgba(255, 255, 255, 0.363);
+                    margin-top: 15px;
+
+                    .pestaña_perfil {
+                        margin-bottom: 5px;
+                        text-decoration: none;
+                        transition: all .2s;
+                        color: rgb(53, 53, 53);
+                        border-top-left-radius: 50px;
+                        border-bottom-left-radius: 50px;
+
+                        img {
+                            width: 35px;
+                            padding: 7px;
+                            background-color: white;
+                            border: 1px solid deeppink;
+                            border-radius: 50px;
+                            transition: all .2s;
+                            margin-right: 3px;
+                        }
+                    }
+
+                    .pestaña_perfil:hover {
+                        background-color: rgb(0, 0, 0);
+                        color: white;
+                        border-top-left-radius: 50px;
+                        border-bottom-left-radius: 50px;
+                    }
+
+                    .pestaña_perfil:hover .mi_cuenta {
+                        border: 1px solid rgb(255, 0, 119);
+                        padding: 5px;
+                    }
+
+                    .pestaña_perfil:hover .compras_realizadas {
+                        border: 1px solid rgb(255, 0, 119);
+                        padding: 5px;
+                    }
+
+                    .pestaña_perfil:hover .reputacion {
+                        border: 1px solid rgb(255, 0, 119);
+                        padding: 5px;
+                    }
+
+                    .pestaña_perfil:hover .cerrar_sesion {
+                        border: 1px solid rgb(255, 0, 119);
+                        padding: 5px;
+                    }
+
+                    .canvas_bottom {
+                        position: absolute;
+                        width: 90%;
+                        bottom: 10px;
+                        text-align: center;
+                        margin-left: 5px;
+
+                        img {
+                            position: relative;
+                            width: 150px;
+                            filter: opacity(0.5);
+                            margin-bottom: 0px;
+                        }
+
+                        .footer_canvas {
+                            position: relative;
+                            color: rgb(0, 0, 0);
+                            font-size: 11px;
+                            white-space: nowrap;
+                            font-weight: 300;
+                            filter: opacity(0.5);
+                            right: 0;
+
+                            a {
+                                text-decoration: none;
+                                color: deeppink;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offcanvas-backdrop::before {
+    z-index: 3;
+}
+
+//------- Header Section -------//
+
+#header {
+    .cover_image {
+        background-image: url("../escuelasiade/portada.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 370px;
+        position: relative;
+        z-index: 1;
+
+        p {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 2px 20px 3px 20px;
+            bottom: -10px;
+            left: 5px;
+            color: rgb(216, 216, 216);
+            cursor: pointer;
+            font-weight: 300;
+            border-radius: 3px;
+            transition: all .2s;
+
+            img {
+                width: 25px !important;
+                margin-right: 3px;
+            }
+        }
+
+        p:hover {
+            background-color: rgba($color: #000000, $alpha: 0.8);
+        }
+
+        .profile_image {
+            width: 170px;
+            height: 170px;
+            border-radius: 100px;
+            background: rgb(255, 255, 255);
+            background-image: url("../escuelasiade/perfil.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 3px solid rgb(75, 75, 75);
+            position: absolute;
+            left: 50%;
+            margin-left: -85px;
+            bottom: -20px;
+
+            input {
+                width: 35px;
+                height: 35px;
+                background-color: rgba(0, 0, 0, 0.603);
+                position: absolute;
+                bottom: 0;
+                right: 10px;
+                border-radius: 100px;
+                border: 1px solid transparent;
+                z-index: 9;
+            }
+
+            img {
+                width: 32px;
+                margin-left: 5px;
+                margin-top: 4px;
+                position: absolute;
+                bottom: 5px;
+                right: 15px;
+                background-color: rgba(22, 22, 22, 0.644);
+                border-radius: 50px;
+                padding: 4px;
+                cursor: pointer !important;
+                transition: all .2s;
+            }
+
+            img:hover {
+                background-color: rgba(0, 0, 0, 0.726);
+            }
+        }
+    }
+
+    .cover_image::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(85, 85, 85, 0.4);
+        z-index: -1;
+    }
+
+    .titulo {
+        text-align: center;
+
+        h1 {
+            margin-top: 20px;
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+
+    .descripcion {
+        text-align: center;
+
+        p {
+            line-height: 17px;
+            color: rgb(78, 78, 78);
+            margin-bottom: 15px;
+            margin-top: 10px;
+            font-size: 15px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 10px;
+            color: rgb(80, 80, 80);
+            background-color: rgb(216, 216, 216);
+            padding: 2px 10px;
+            transition: all .2s;
+        }
+
+        a:hover {
+            background-color: rgb(119, 119, 119);
+            color: white;
+        }
+
+        p:focus {
+            border: 1px solid rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px rgb(230, 230, 230);
+            outline-color: transparent;
+            outline-style: ridge;
+        }
+    }
+}
+
+.linea_horizontal {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    color: transparent;
+}
+
+//------- Navegador Section -------//
+
+#navegador {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.877);
+    display: flex;
+    padding: 0px 0px 0px 5px;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    z-index: 2;
+
+    .pestañas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+
+        a {
+            font-weight: 300;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+            padding: 15px 15px;
+            transition: all .2s;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.267);
+        }
+
+    }
+}
+
+/* --- Clase que agregaremos cuando el usuario haga scroll --- */
+.menu-fixed {
+    position: fixed;
+    z-index: 10;
+    top: 50px;
+    width: 100%;
+}
+
+//------- Productos Section -------//
+
+#productos {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+
+    h1 {
+        font-size: 42px;
+        font-weight: 200;
+
+        span {
+            background-color: rgb(255, 0, 98);
+            color: white;
+        }
+    }
+
+    h6 {
+        a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 10px;
+            color: rgb(80, 80, 80);
+            background-color: rgb(216, 216, 216);
+            padding: 3px 10px;
+            transition: all .2s;
+        }
+
+        a:hover {
+            background-color: rgb(119, 119, 119);
+            color: white;
+        }
+    }
+
+    #productos_disponibles {
+        display: flex;
+        flex-flow: row wrap;
+        margin: auto;
+
+        .card {
+            margin-top: 45px;
+            width: 18rem;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            box-shadow: 5px 5px 10px rgb(241, 241, 241);
+            border: none;
+            flex: auto;
+            max-width: 300px;
+
+            .image_product {
+                background-color: white;
+                width: 100%;
+                height: 150px;
+                border-radius: 3px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                img {
+                    height: 150px;
+                    width: 100%;
+                    border-top-left-radius: 3px;
+                    border-top-right-radius: 3px;
+                }
+            }
+
+            .card-body {
+                padding: 3px;
+
+                .card-title {
+                    margin-bottom: 0px;
+                    color: black;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+
+                .card-subtitle {
+                    color: rgb(102, 102, 102);
+                    font-size: 12px;
+                    margin-top: 3px;
+                    font-weight: 400;
+                }
+
+                hr {
+                    margin: 4px 0px 0px 0px;
+                    color: black;
+                }
+
+                .card-text {
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                    font-size: 12px;
+                    color: black;
+                    font-weight: 300;
+                    min-height: 90px;
+                    max-height: 90px;
+                    overflow-y: scroll;
+                    text-align: left;
+                }
+
+                .first-button {
+                    background-color: white !important;
+                    color: rgb(100, 100, 100) !important;
+                    border: 1px solid rgb(100, 100, 100) !important;
+                }
+
+                .first-button:focus {
+                    box-shadow: none;
+                }
+
+                .card-button {
+                    background-color: rgb(255, 0, 106);
+                    border: 1px solid rgb(255, 0, 106);
+                    color: white;
+                    font-weight: 300;
+                    padding: 2px 30px;
+                    font-size: 13px;
+                    min-width: 161px;
+                }
+
+                .card-button:focus {
+                    box-shadow: none;
+                }
+
+                .card-button:hover {
+                    background-color: transparent;
+                    color: rgb(255, 0, 106);
+                    border-color: rgb(255, 0, 106);
+                }
+
+                .card-bottom {
+                    margin-bottom: 0px;
+                    margin-top: 5px;
+                    font-size: 13px;
+                    color: black;
+
+                    span {
+                        background-color: rgb(0, 0, 0);
+                        color: white;
+                        padding: 0px 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    #botonVerMas {
+        padding: 3px 40px;
+        background-color: rgb(238, 238, 238);
+        color: black;
+        border: none;
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px rgb(235, 235, 235);
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: 400;
+        transition: all .2s;
+    }
+
+    #botonVerMas:active {
+        background-color: rgb(212, 212, 212);
+        color: black;
+    }
+}
+
+//--------- Temario Section ---------//
+#temario {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+
+    h1 {
+        font-size: 42px;
+        font-weight: 200;
+
+        span {
+            background-color: rgb(255, 0, 98);
+            color: white;
+        }
+    }
+
+    h6 {
+        a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 10px;
+            color: rgb(80, 80, 80);
+            background-color: rgb(216, 216, 216);
+            padding: 3px 10px;
+            transition: all .2s;
+        }
+
+        a:hover {
+            background-color: rgb(119, 119, 119);
+            color: white;
+        }
+    }
+    ul {
+        margin-top: 50px;
+        li {
+            text-align: left;
+            font-weight: 300;
+            margin: 5px;
+        }
+    }
+}
+
+//------- Descripción Section -------//
+
+#descripcion {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+
+    h1 {
+        font-size: 42px;
+        font-weight: 200;
+
+        span {
+            background-color: rgb(255, 0, 98);
+            color: white;
+        }
+    }
+
+    h6 {
+        a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 10px;
+            color: rgb(80, 80, 80);
+            background-color: rgb(216, 216, 216);
+            padding: 3px 10px;
+            transition: all .2s;
+        }
+
+        a:hover {
+            background-color: rgb(119, 119, 119);
+            color: white;
+        }
+    }
+
+    .contenedorDescripcion {
+        margin-top: 50px;
+        display: flex;
+        height: 500px;
+        border: 1px solid transparent;
+        overflow: hidden;
+
+        .pIzquierda {
+            width: 30%;
+            height: 500px;
+            background-color: white;
+            box-shadow: 0px 0px 20px rgb(194, 194, 194);
+            display: flex;
+            flex-flow: column nowrap;
+
+            .imagen {
+                height: 40%;
+                padding-top: 50px;
+
+                img {
+                    width: 150px;
+                }
+            }
+
+            .texto {
+                background-color: rgb(255, 255, 255);
+                height: 50%;
+
+                button {
+                    padding: 4px 60px;
+                    background-color: white;
+                    border: 1px solid transparent;
+                    border-radius: 3px;
+                    box-shadow: 0px 5px 10px rgb(201, 201, 201);
+                    transition: all .2s;
+                    font-weight: 300;
+                    margin-top: 20px;
+                }
+
+                button:active {
+                    box-shadow: 0px 0px 0px rgb(218, 218, 218);
+                }
+
+                p {
+                    margin-top: 0px;
+
+                    a {
+                        color: grey;
+                        font-size: 11px;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            ul {
+                list-style: none;
+                text-align: left;
+                padding: 30px 17px 0px 15px;
+
+                li {
+                    line-height: 25px;
+                    font-weight: 200;
+                }
+            }
+        }
+
+        .pDerecha {
+            width: 70%;
+            padding-top: 20px;
+            padding-left: 40px;
+            text-align: left;
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                text-align: left;
+                margin-top: 15px;
+                font-weight: 200;
+            }
+
+            a {
+                color: deeppink;
+                font-weight: 400;
+                text-decoration: none;
+                transition: all .2s;
+            }
+
+            a:hover {
+                color: rgb(255, 103, 184);
+            }
+        }
+    }
+}
+
+// Ubicación Section //
+
+#ubicacion {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+
+    h1 {
+        font-size: 42px;
+        font-weight: 200;
+
+        span {
+            background-color: rgb(255, 0, 98);
+            color: white;
+        }
+    }
+
+    h6 {
+        a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 10px;
+            color: rgb(80, 80, 80);
+            background-color: rgb(216, 216, 216);
+            padding: 3px 10px;
+            transition: all .2s;
+        }
+
+        a:hover {
+            background-color: rgb(119, 119, 119);
+            color: white;
+        }
+    }
+
+    iframe {
+        margin-top: 50px;
+        position: relative;
+    }
+}
+
+// Medios de Pago //
+
+#mediosDePago {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+
+    h1 {
+        font-size: 42px;
+        font-weight: 200;
+
+        span {
+            background-color: rgb(255, 0, 98);
+            color: white;
+        }
+    }
+
+    h6 {
+        a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 10px;
+            color: rgb(80, 80, 80);
+            background-color: rgb(216, 216, 216);
+            padding: 3px 10px;
+            transition: all .2s;
+        }
+
+        a:hover {
+            background-color: rgb(119, 119, 119);
+            color: white;
+        }
+    }
+    .contenedorPagos {
+        width: 100%;
+        height: 150px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .tarjetaDebito{
+            width: 30%;
+            justify-content: center;
+        }
+        .tarjetaCredito{
+            width: 30%;
+        }
+        .transferencia{
+            width: 30%;
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 15px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 70px;
+        }
+    }
+}
+
+#footer {
+    p {
+        text-align: center;
+        font-weight: 200;
+        a {
+            color: black;
+            text-decoration: none;
+            transition: all .2s;
+            font-weight: 300;
+        }
+        a:hover {
+            color: rgb(255, 101, 183);
+        }
+    }
+}
+
+// MEDIA QUERIES //
+@media (max-width:932px) {
+    #productos_disponibles {
+        justify-content: space-around !important;
+    }
+}

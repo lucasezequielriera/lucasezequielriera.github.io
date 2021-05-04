@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+}
+
+html {
+  font-family: 'system-ui';
+}
+
+/* @extend list-type-ulli; */
+list-type-ulli,
+.actions ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+  transition: all 300ms ease 0s;
+  -moz-transition: all 300ms ease 0s;
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  -ms-transition: all 300ms ease 0s;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+  appearance: unset !important;
+  -moz-appearance: unset !important;
+  -webkit-appearance: unset !important;
+  -o-appearance: unset !important;
+  -ms-appearance: unset !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  -o-appearance: none !important;
+  -ms-appearance: none !important;
+  margin: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+}
+
+input[type=checkbox] {
+  appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  -webkit-appearance: checkbox !important;
+  -o-appearance: checkbox !important;
+  -ms-appearance: checkbox !important;
+}
+
+input[type=radio] {
+  appearance: radio !important;
+  -moz-appearance: radio !important;
+  -webkit-appearance: radio !important;
+  -o-appearance: radio !important;
+  -ms-appearance: radio !important;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 30px transparent inset;
+  -moz-box-shadow: 0 0 0 30px transparent inset;
+  -webkit-box-shadow: 0 0 0 30px transparent inset;
+  -o-box-shadow: 0 0 0 30px transparent inset;
+  -ms-box-shadow: 0 0 0 30px transparent inset;
+  background-color: transparent !important;
+}
+
+.clear {
+  clear: both;
+}
+
+h2 {
+  font-size: 37px;
+  color: white;
+  font-weight: 200;
+  font-family: 'system-ui';
+  margin: 0px;
+  padding-bottom: 45px;
+}
+
+p span {
+  background-color: rgb(255, 0, 98);
+  padding: 0px 5px;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: text-top;
+  width: 170px;
+}
+
+body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #222;
+  font-weight: 400;
+  font-family: 'system-ui';
+  margin: 0px;
+  background-color: white;
+}
+
+.main {
+  padding: 0px;
+  height: 100vh;
+}
+
+p {
+  margin: 0px;
+}
+
+p.desc {
+  color: #999;
+  line-height: 1.92;
+  color: rgb(201, 201, 201);
+}
+
+p.title {
+  font-weight: bold;
+  padding-bottom: 0px;
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+fieldset {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.signup-desc {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(29, 29, 29, 0.9) 100%);
+  padding: 20px;
+  height: 200px;
+  text-align: center;
+  box-shadow: 0px 0px 10px black;
+}
+
+.signup-form {
+  padding: 40px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000000;
+  box-sizing: border-box;
+  font-family: 'system-ui';
+  font-weight: 300;
+  font-size: 24px;
+  transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input+label {
+  position: absolute;
+  transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -webkit-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  left: 0;
+  top: 25px;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  font-weight: 200;
+}
+
+input:focus+label {
+  top: -7px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+input:valid+label {
+  top: -7px;
+  font-size: 14px;
+  font-weight: 100;
+  color: green;
+}
+
+.form-group {
+  position: relative;
+}
+
+.field-icon {
+  font-size: 24px;
+  position: relative;
+  z-index: 2;
+  float: right;
+  margin-top: -37px;
+}
+
+.content {
+  padding: 100px;
+  position: relative;
+}
+
+.content h3 {
+  display: none;
+}
+
+.step-current {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: 'system-ui';
+  text-transform: uppercase;
+  font-weight: 400;
+  color: white;
+  border: 1px solid none;
+  padding: 10px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(29, 29, 29, 0.9) 100%);
+  box-shadow: 5px 5px 10px rgb(190, 190, 190);
+}
+
+.actions ul {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-flow: row;
+}
+
+.actions ul .disabled {
+  display: none;
+}
+
+.actions ul li {
+  margin-left: 20px;
+}
+
+.actions ul li:first-child a {
+  background: #fff;
+  color: #999;
+}
+
+.actions ul li a {
+  width: 140px;
+  height: 50px;
+  color: black;
+  font-family: 'system-ui';
+  font-size: 16px;
+  font-weight: 300;
+  background-color: transparent;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  text-decoration: none;
+  box-shadow: -5px 5px 10px rgb(201, 201, 201);
+  border-radius: 3px;
+  padding: 15px 40px;
+}
+
+.actions ul li a:active {
+  box-shadow: 0px 0px 0px white;
+}
+
+.steps {
+  display: none;
+}
+
+.swal-modal .swal-text {
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: calc(100% - 40px);
+    max-width: 100%;
+  }
+
+  .signup-form {
+    padding: 55px 30px;
+  }
+
+  .signup-desc {
+    width: 465px;
+  }
+
+  .signup-img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .steps ul,
+  .signup-content {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+  }
+
+  .steps ul li,
+  .signup-desc,
+  .signup-form-conent {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .actions ul li a {
+    width: 100px;
+  }
+}
