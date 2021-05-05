@@ -22,7 +22,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 3;
-  width: 100%;
+  width: 100% !important;
   height: 50px;
   background-color: rgba(0, 0, 0, 0.877);
   display: flex;

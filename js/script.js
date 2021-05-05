@@ -206,16 +206,13 @@ botonMediosDePago.addEventListener('click', () => {
 
 // AJAX //
 
-// Inicializar función AJAX al abrir pantalla // 
-window.onload = usandoAjax;
-
 const dataArray = [JSON.parse(sessionStorage.getItem("data"))];
 
 // Array de productos //
 const Card = dataArray[0];
 
 // Utilizando AJAX para mostrar productos desde JSON //
-function usandoAjax() {
+document.addEventListener("DOMContentLoaded", function usandoAjax() {
     $.ajax({
         method: 'GET',
         url: '../escuelasiade/productos.json',
@@ -224,7 +221,10 @@ function usandoAjax() {
             sessionStorage.setItem("data", JSON.stringify(data));
         }
     });
-}
+});
+
+// Regargando nuevamente la página para que se cargue el archivo JSON //
+
 
 // Al clickear en botón "Agregar Producto" agrega productos //
 document.getElementById('addProducto').addEventListener('click', crearProducto);
@@ -235,7 +235,17 @@ function crearProducto() {
     let descripcion = prompt("Ingresa la descripción de tu producto");
     let boton = prompt("Ingresa el nombre de tu botón");
     let precio = prompt("Ingresa el precio del producto");
-    Card.push({"nombre": nombre, "categoria": categoria, "descripcion": descripcion, "boton": boton, "precio": precio});
+    if (!nombre | !categoria | !descripcion | !boton | !precio) {
+        swal({
+            button: false,
+            text: "No has ingresado todos los campos",
+            icon: "error",
+            timer: 2000
+        });
+        return false;
+    } else {
+        Card.push({"nombre": nombre, "categoria": categoria, "descripcion": descripcion, "boton": boton, "precio": precio, "imagen": "../images/categorias/cursos.jpg   "});
+    }
 }
 
 // Mostrar los productos en HTML //

@@ -162,7 +162,7 @@ function nuevoNavbar() {
     </div>
     `
     // Saludo al perfil conectado //
-    document.querySelector("#nombrePerfil").textContent = `Bienvenido!`
+    document.querySelector("#nombrePerfil").textContent = `Mi Perfil`
     // Cerrar sesión cuando se clickea en botón "cerrar sesión" //
     document.querySelector(".cerrarSesion").addEventListener("click", cerrarSesion);
 }
@@ -190,6 +190,10 @@ function cerrarSesion(e) {
         });
 }
 
+// Inicializar función para que no se sobreescriba con los datos anteriores en el array "clientes" //
+cargarClientesDeLocalStorage();
+mostrarSesion();
+
 // Animación en Logo //
 const logotooeshop = $('#mostrarLogo');
 
@@ -214,27 +218,23 @@ logotooeshop.click(function() {
                 }, 'slow')
 });
 
-/// Contacto ///
+// /// Contacto ///
 
-// Selectores //
-const formContacto = document.querySelector("#formularioContacto");
-const inputs = formContacto.querySelectorAll("input[type='text']");
+// // Selectores //
+// const formContacto = document.querySelector("#formularioContacto");
+// const inputs = formContacto.querySelectorAll("input[type='text']");
 
-// Inputs del formulario de contacto //
-const nombreContacto = formContacto.querySelector("#nombreContacto");
-const apellidoContacto = formContacto.querySelector("#apellidoContacto");
-const emailContacto = formContacto.querySelector("#emailContacto");
-const telefonoContacto = formContacto.querySelector("#telefonoContacto");
-const paisContacto = formContacto.querySelector("#paisContacto");
-const provinciaContacto = formContacto.querySelector("#provinciacontacto");
-const asuntoContacto = formContacto.querySelector("#asuntoContacto");
-const mensajeContacto = formContacto.querySelector("#mensajeContacto");
+// // Inputs del formulario de contacto //
+// const nombreContacto = formContacto.querySelector("#nombreContacto");
+// const apellidoContacto = formContacto.querySelector("#apellidoContacto");
+// const emailContacto = formContacto.querySelector("#emailContacto");
+// const telefonoContacto = formContacto.querySelector("#telefonoContacto");
+// const paisContacto = formContacto.querySelector("#paisContacto");
+// const provinciaContacto = formContacto.querySelector("#provinciacontacto");
+// const asuntoContacto = formContacto.querySelector("#asuntoContacto");
+// const mensajeContacto = formContacto.querySelector("#mensajeContacto");
 
-formContacto.addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Todo perfecto, mensaje enviándose...");
-});
-
-// Inicializar función para que no se sobreescriba con los datos anteriores en el array "clientes" //
-cargarClientesDeLocalStorage();
-mostrarSesion();
+// formContacto.addEventListener("submit", function(e) {
+//     e.preventDefault();
+//     alert("Todo perfecto, mensaje enviándose...");
+// });
