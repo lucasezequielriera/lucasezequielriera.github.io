@@ -223,9 +223,6 @@ document.addEventListener("DOMContentLoaded", function usandoAjax() {
     });
 });
 
-// Regargando nuevamente la página para que se cargue el archivo JSON //
-
-
 // Al clickear en botón "Agregar Producto" agrega productos //
 document.getElementById('addProducto').addEventListener('click', crearProducto);
 
@@ -265,7 +262,7 @@ function mostrarProductos() {
                     <hr>
                     <p class="card-text">${value.descripcion}</p>
                     <button type="button" class="btn btn-success card-button first-button" data-bs-toggle="modal" data-bs-target="#exampleModal">${value.boton}</button>
-                    <a href="" class="btn card-button">Comprar</a>
+                    <a href="" class="btn card-button comprar">Comprar</a>
                     <p class="card-bottom"><span>$${value.precio}</span> Pesos Argentinos</p>
                 </div>
             </div>`
@@ -292,7 +289,7 @@ function mostrarProductos() {
                         <hr>
                         <p class="card-text">${value.descripcion}</p>
                         <button type="button" class="btn btn-success card-button first-button" data-bs-toggle="modal" data-bs-target="#exampleModal">${value.boton}</button>
-                        <a href="" class="btn card-button">Comprar</a>
+                        <a href="" class="btn card-button comprar">Comprar</a>
                         <p class="card-bottom"><span>$${value.precio}</span> Pesos Argentinos</p>
                     </div>
                 </div>`

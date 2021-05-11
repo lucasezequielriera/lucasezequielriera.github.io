@@ -6,14 +6,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/bobinado.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Cerrajería",
@@ -22,14 +15,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/cerrajeria.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Construcción",
@@ -38,14 +24,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/construccion.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Construcción en Seco",
@@ -54,14 +33,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/construccionenseco.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Cosmetología y Maquillaje",
@@ -70,14 +42,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/cosmetologiaymaquillaje.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Cuidado de Adultos Mayores",
@@ -86,14 +51,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/cuidadodeadultosmayores.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Diseño de Moda",
@@ -102,14 +60,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/disenodemoda.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Diseño y Confección de Vestimenta",
@@ -118,14 +69,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/disenoyconfecciondevestimenta.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Electricidad y Electrónica Automotriz",
@@ -134,14 +78,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/electricidadyelectronicaautomotriz.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Electricidad y Electrónica Industrial",
@@ -150,14 +87,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/electricidadyelectronicaindustrial.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Electrónica Digital",
@@ -166,14 +96,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/electronicadigital.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Estética y Masaje Corporal",
@@ -182,14 +105,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/esteticaymasajecorporal.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Fotografía y Estudio Digital",
@@ -198,14 +114,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/fotografiayestudiodigital.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Frenos",
@@ -214,14 +123,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/frenos.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Instalaciones Eléctricas",
@@ -230,14 +132,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/instalacioneselectricas.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Instalaciones Sanitarias y de Gas",
@@ -246,14 +141,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/instalacionessanitariasydegas.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Instalador de Paneles Solares",
@@ -262,14 +150,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/instaladordepanelessolares.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Inyección Electrónica Diesel",
@@ -278,14 +159,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/inyeccionelectronicadiesel.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Inyección Electrónica GNC",
@@ -294,14 +168,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/inyeccionelectronicagnc.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Masaje Terapéutico Oriental",
@@ -310,14 +177,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/masajeterapeuticooriental.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Mecánica de Motos",
@@ -326,14 +186,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/mecanicademotos.jpeg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Mecánica General",
@@ -342,14 +195,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/mecanicageneral.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Motores Diesel",
@@ -358,14 +204,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/motoresdiesel.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Office Básico",
@@ -374,14 +213,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/officebasico.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Peluquería",
@@ -390,14 +222,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/peluqueria.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Plaquetas Electrónicas",
@@ -406,14 +231,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/plaquetaselectronicas.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Refrigeración y Aire Acondicionado",
@@ -422,14 +240,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/refrigeracionyaireacondicionado.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Reparación de Celulares",
@@ -438,14 +249,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/reparaciondecelulares.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Reparación de Electrodomésticos",
@@ -454,14 +258,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/reparaciondeelectrodomesticos.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Soldadura Eléctrica y Herrería",
@@ -470,14 +267,7 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/soldaduraelectricayherreria.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     },
     {
         "nombre": "Uñas Esculpidas",
@@ -486,13 +276,6 @@
         "boton": "Ver Temario",
         "precio": 10000,
         "imagen": "./productos/unasesculpidas.jpg",
-        "stock": 5,
-        "temario": [
-                    "7 Clases Audiovisuales + 6 Manuales De Estudio.",
-                    "MODULO 1 Y VIDEO 1",
-                    "• Básico de herramientas y materiales",
-                    "• Empalmes",
-                    "• Tester<br><br>"
-                ]
+        "stock": 5
     }
 ]
