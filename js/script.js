@@ -262,7 +262,11 @@ function mostrarProductos() {
                     <hr>
                     <p class="card-text">${value.descripcion}</p>
                     <button type="button" class="btn btn-success card-button first-button" data-bs-toggle="modal" data-bs-target="#exampleModal">${value.boton}</button>
-                    <a href="" class="btn card-button comprar">Comprar</a>
+                    <form action="http://localhost:3000/checkout" method="POST">
+                        <input type="hidden" name="title" value="${value.nombre}">
+                        <input type="hidden" name="price" value="${value.precio}">
+                        <input type="submit" value="Comprar Ahora" class="btn card-button comprar">
+                    </form>
                     <p class="card-bottom"><span>$${value.precio}</span> Pesos Argentinos</p>
                 </div>
             </div>`

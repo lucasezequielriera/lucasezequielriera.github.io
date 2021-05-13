@@ -27,7 +27,9 @@ app.post('/checkout', (req, res) => {
   };
   mercadopago.preferences.create(preference)
     .then(function (response) {
+      // Redirección a "init point" para cobrar el producto //
       res.redirect(response.body.init_point);
+
     }).catch(function (error) {
       console.log(error);
     });

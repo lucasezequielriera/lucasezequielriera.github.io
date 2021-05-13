@@ -599,6 +599,10 @@ html {
   color: #646464 !important;
   border: 1px solid #646464 !important;
 }
+#productos #productos_disponibles .card .card-body .first-button:hover {
+  background-color: #383838 !important;
+  color: white !important;
+}
 #productos #productos_disponibles .card .card-body .first-button:focus {
   box-shadow: none;
 }
