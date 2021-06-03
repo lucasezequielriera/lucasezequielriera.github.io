@@ -36,7 +36,7 @@ function hideModal() {
 
 /////----- Navbar -----/////
 
-// Consts //
+// Principal DOM //
 const containerScroll = document.querySelector('.container-scroll');
 
 // Array (categories) //
@@ -86,6 +86,7 @@ const categoria5 = document.querySelector('.categoria5');
 const categoria6 = document.querySelector('.categoria6');
 const categoria7 = document.querySelector('.categoria7');
 const categoria8 = document.querySelector('.categoria8');
+const botonCursos = document.querySelector('.dropdown-toggle');
 const topSection = document.querySelector('.container-information-top');
 const bottomSection = document.querySelector('.container-information-bottom');
 
@@ -100,6 +101,17 @@ categoria5.addEventListener("mouseover", mostrar5);
 categoria6.addEventListener("mouseover", mostrar6);
 categoria7.addEventListener("mouseover", mostrar7);
 categoria8.addEventListener("mouseover", mostrar8);
+
+ // Add slideDown animation to Bootstrap dropdown when expanding.
+ $('.dropdown').on('show.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // Add slideUp animation to Bootstrap dropdown when collapsing.
+  $('.dropdown').on('hide.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+
 
 // Functions //
 function mostrar0() {
