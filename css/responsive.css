@@ -1,0 +1,12 @@
+@media screen and (max-width: 894px) {
+  body #main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  body #main .left-part .title {
+    white-space: nowrap;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

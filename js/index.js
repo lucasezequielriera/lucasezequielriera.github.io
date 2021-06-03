@@ -1,240 +1,266 @@
-//////////////////////////////////////////////////////////// REGISTRARSE ////////////////////////////////////////////////////////////
+'use strict'
 
-// Formulario Wizard //
-(function ($) {
-    let form = $("#signup-form");
-    form.steps({
-        headerTag: "h3",
-        bodyTag: "fieldset",
-        transitionEffect: "fade",
-        labels: {
-            previous: 'Anterior',
-            next: 'Siguiente',
-            finish: 'Terminar',
-            current: ''
-        },
-        titleTemplate: '<h3 class="title">#title#</h3>',
-        onFinished: function (event, currentIndex) {
-            swal({
-                icon: "success",
-                timer: 2500,
-                text: "Perfecto!",
-                text: "Te redireccionaremos para que puedas ingresar a tu perfil",
-                button: false,
-            });
-        },
-    });
-    $(".toggle-password").on('click', function () {
+/////----- Main -----/////
 
-        $(this).toggleClass("zmdi-eye zmdi-eye-off");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-            input.attr("type", "text");
-        } else {
-            input.attr("type", "password");
-        }
-    });
-})(jQuery);
+// Consts //
+const body = document.querySelector('body');
+const modalWindow = document.querySelector('#modal');
+const search = document.querySelector('#search');
+const formSearch = document.querySelector('#formSearch');
+const submitButton = document.querySelector('#submit-button');
 
-// Objeto Constructor de Clientes //
-function Clientes(nombre, email, password) {
-    this.nombre = nombre;
-    this.email = email;
-    this.password = password;
+// Listeners //
+search.addEventListener("focus", showModal);
+search.addEventListener("blur", hideModal);
+
+// Show Modal Function //
+function showModal() {
+    modalWindow.style.zIndex = 9999;
+    formSearch.style.zIndex = 10000;
+    modalWindow.style.backgroundColor = 'rgba(0,0,0,0.7)';
+    submitButton.classList.remove('btn-outline-danger');
+    submitButton.classList.add('btn-danger');
 }
 
-// Array Principal de Clientes //
-let clientes = [];
-
-// Variables //
-let botonAnterior = document.body.getElementsByTagName("a")[4];
-let botonSiguiente = document.body.getElementsByTagName("a")[5];
-let botonTerminar = document.body.getElementsByTagName("a")[6];
-let input = document.querySelector("input");
-let inputNombre = document.querySelector("#your_name");
-let inputEmail = document.querySelector("#email");
-let inputPassword = document.querySelector("#your_password");
-let inputRePassword = document.querySelector("#confirm_password");
-
-// Validación de Formulario //
-botonTerminar.addEventListener("click", validarInput);
-
-function validarInput() {
-    if (!inputNombre.value && !inputEmail.value && !inputPassword.value && !inputPassword.value) {
-        swal({
-            icon: "error",
-            text: "No has escrito en ningún campo, completa todo el formulario",
-            button: false,
-            timer: 2000,
-        });
-        return false;
-    } else if (!inputNombre.value || !inputEmail.value || !inputPassword.value || !inputPassword.value) {
-        swal({
-            icon: "error",
-            button: false,
-            text: "No has completado todos los campos",
-            timer: 2000,
-        });
-        return false;
-    } else if (inputPassword.value != inputRePassword.value) {
-        swal({
-            icon: "error",
-            button: false,
-            text: "Las contraseñas no coinciden",
-            timer: 2000,
-        });
-        return false;
-    } else {
-        // Encadenando función // 
-        crearCliente();
-    }
+// Hide Modal Function //
+function hideModal() {
+    modalWindow.style.zIndex = -1;
+    modalWindow.style.backgroundColor = 'transparent';
+    submitButton.classList.remove('btn-danger');
+    submitButton.classList.add('btn-outline-danger');
+    // Si hay problemas con el buscador, éste es el problema //
+    formSearch.style.zIndex = 1;
 }
 
-// Agrega el cliente al array luego de pasar por las validaciones //
-function crearCliente() {
-    const clienteNuevo = new Clientes(inputNombre.value, inputEmail.value, inputPassword.value);
-    clientes.push(clienteNuevo);
-    // Encadenando función //
-    guardarClientesEnLocalStorage();
-    // Después de 3 segundos se redirecciona a "Iniciar Sesión" //
-    setTimeout(function () {
-        window.location.href = "../iniciar_sesion.html";
-    }, 3000);
-}
+/////----- / Main -----/////
 
-// Guarda la información del nuevo cliente al localStorage //
-function guardarClientesEnLocalStorage() {
-    localStorage.setItem("clientes", JSON.stringify(clientes));
-}
+/////----- Navbar -----/////
 
-// Carga lo guardado del localStorage en el array de "clientes", una manera diferente en vez de ponerlo dentro del array //
-function cargarClientesDeLocalStorage() {
-    if (localStorage.getItem("clientes") !== null) {
-        clientes = JSON.parse(localStorage.getItem("clientes"));
-    }
-}
+// Consts //
+const containerScroll = document.querySelector('.container-scroll');
 
-//////////////////////////////////////////////////////////// INDEX ////////////////////////////////////////////////////////////
+// Array (categories) //
+const categories = ['it', 'oficios', 'electrónica', 'salud', 'estética', 'electricidad', 'mecánica', 'economía', 'Cursos TEMPO']
 
-const estadoSesion = localStorage.getItem("sesion");
+// Categories Iteration //
+categories.forEach(function(item, index) {
+    // li //
+    const li = document.createElement("li");
+    // imagen //
+    const img = document.createElement("img");
+    img.setAttribute('src', '../images/arrowright.svg');
+    img.setAttribute('alt', 'alt');
+    img.style = 'position: absolute; right: 10px; top: 13px';
+    // a //
+    const a = document.createElement("a");
+    a.classList.add("dropdown-item");
+    a.classList.add(`categoria${index}`)
+    a.setAttribute("href", ".");
+    a.textContent = `${item}`;
+    a.style = 'position: relative';
+    // br //
+    const br = document.createElement("br");
+    // span //
+    const span = document.createElement("span");
+    span.textContent = `cursos online`;
+    // Insertar y vincular todo //
+    a.appendChild(img);
+    a.appendChild(br);
+    a.appendChild(span);
+    li.appendChild(a);
+    containerScroll.appendChild(li);
 
-// Definir estado de sesión //
-function mostrarSesion() {
-    if (estadoSesion == 1) {
-        nuevoNavbar();
-    }
-}
-
-function nuevoNavbar() {
-    // Desaparecer botones "Registrarse" y "Iniciar sesión" //
-    document.querySelector(".registrarme", "#principal_buttons").style.display = "none";
-    document.querySelector(".iniciarSesion").style.display = "none";
-    // Mostrar Navbar de Perfil //
-    document.querySelector("#navbar").innerHTML += `
-    <!-- Pestaña Perfil -->
-    <div id="perfil "class="perfil">
-        <p id="nombrePerfil">Mi Perfil</p>
-        <div class="perfil_usuario">
-            <button class=" button_verPerfil btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></button>
-            <!-- Vista Offcanvas -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <div class="profile_cover"></div>
-                    <div class="profile_data">
-                        <h5 id="offcanvasRightLabel">Lucas Riera</h5>
-                        <h6>Cliente</h6>
-                    </div>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <a class="pestaña_perfil" href="#"><img src="../escuelasiade/iconos/usuario.png" alt="" class="mi_cuenta"> Mi cuenta</a>
-                    <a class="pestaña_perfil" href="#"><img src="../escuelasiade/iconos/carrito_perfil.png" alt="" class="compras_realizadas"> Mis compras</a>
-                    <a class="pestaña_perfil" href="#"><img src="../escuelasiade/iconos/reputacion.png" alt="" class="reputacion"> Ver mi reputación</a>
-                    <a class="pestaña_perfil cerrarSesion" href="#"><img src="../escuelasiade/iconos/cerrar_sesion.png" alt="" class="cerrar_sesion"> Cerrar Sesión</a>
-                    <div class="canvas_bottom">
-                        <img src="./images/logo.png" alt="">
-                        <p class="footer_canvas">Engineered by <a href="#">Agrowd</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- / Vista Offcanvas -->
-        </div>
-    </div>
-    `
-    // Saludo al perfil conectado //
-    document.querySelector("#nombrePerfil").textContent = `Mi Perfil`
-    // Cerrar sesión cuando se clickea en botón "cerrar sesión" //
-    document.querySelector(".cerrarSesion").addEventListener("click", cerrarSesion);
-}
-
-function cerrarSesion(e) {
-    e.preventDefault();
-    swal({
-            icon: "warning",
-            text: "Estás seguro que quieres salir de tu perfil?",
-            buttons: true,
-            dangerMode: true,
-        })
-        .then((willDelete) => {
-            if (willDelete) {
-                swal("Hasta la próxima!", {
-                    icon: "success",
-                    button: false,
-                    timer: 2000,
-                });
-                setTimeout(function () {
-                    localStorage.removeItem("sesion");
-                    location.reload();
-                }, 2500);
-            }
-        });
-}
-
-// Inicializar función para que no se sobreescriba con los datos anteriores en el array "clientes" //
-cargarClientesDeLocalStorage();
-mostrarSesion();
-
-// Animación en Logo //
-const logotooeshop = $('#mostrarLogo');
-
-logotooeshop.click(function() {
-    logotooeshop.animate({
-                    marginLeft: '50px'
-                }, 'fast')
-                .animate({
-                    marginLeft: '0px',
-                }, 'fast')
-                .animate({
-                    marginLeft: '50px'
-                }, 'normal')
-                .animate({
-                    marginLeft: '0px',
-                }, 'normal')
-                .animate({
-                    marginLeft: '50px'
-                }, 'slow')
-                .animate({
-                    marginLeft: '0px',
-                }, 'slow')
+    // `<li>
+    //     <a class="dropdown-item" href="#">${index}${item} <br />
+    //     <span>3 cursos</span></a>
+    // </li>`
 });
 
-// /// Contacto ///
+// Consts //
+const categoria0 = document.querySelector('.categoria0');
+const categoria1 = document.querySelector('.categoria1');
+const categoria2 = document.querySelector('.categoria2');
+const categoria3 = document.querySelector('.categoria3');
+const categoria4 = document.querySelector('.categoria4');
+const categoria5 = document.querySelector('.categoria5');
+const categoria6 = document.querySelector('.categoria6');
+const categoria7 = document.querySelector('.categoria7');
+const categoria8 = document.querySelector('.categoria8');
+const topSection = document.querySelector('.container-information-top');
+const bottomSection = document.querySelector('.container-information-bottom');
 
-// // Selectores //
-// const formContacto = document.querySelector("#formularioContacto");
-// const inputs = formContacto.querySelectorAll("input[type='text']");
 
-// // Inputs del formulario de contacto //
-// const nombreContacto = formContacto.querySelector("#nombreContacto");
-// const apellidoContacto = formContacto.querySelector("#apellidoContacto");
-// const emailContacto = formContacto.querySelector("#emailContacto");
-// const telefonoContacto = formContacto.querySelector("#telefonoContacto");
-// const paisContacto = formContacto.querySelector("#paisContacto");
-// const provinciaContacto = formContacto.querySelector("#provinciacontacto");
-// const asuntoContacto = formContacto.querySelector("#asuntoContacto");
-// const mensajeContacto = formContacto.querySelector("#mensajeContacto");
+// Listeners //
+categoria0.addEventListener("mouseover", mostrar0);
+categoria1.addEventListener("mouseover", mostrar1);
+categoria2.addEventListener("mouseover", mostrar2);
+categoria3.addEventListener("mouseover", mostrar3);
+categoria4.addEventListener("mouseover", mostrar4);
+categoria5.addEventListener("mouseover", mostrar5);
+categoria6.addEventListener("mouseover", mostrar6);
+categoria7.addEventListener("mouseover", mostrar7);
+categoria8.addEventListener("mouseover", mostrar8);
 
-// formContacto.addEventListener("submit", function(e) {
-//     e.preventDefault();
-//     alert("Todo perfecto, mensaje enviándose...");
-// });
+// Functions //
+function mostrar0() {
+    topSection.innerHTML = `
+    <ul>
+        <h6>Publicidad y Marketing</h6>
+        <a href="."><li>Transformación Digital</li></a>
+        <a href="."><li>Facebook Ads</li></a>
+        <a href="."><li>Google Ads</li></a>
+        <a href="."><li>Microsoft Office</li></a>
+    </ul>
+    <ul>
+        <h6>Desarrollo Web</h6>
+        <a href="."><li>Programación en HTML</li></a>
+        <a href="."><li>Criptomonedas</li></a>
+    </ul>
+    <div class="button-verCursos">
+        <button class='btn btn-dark'>Ver todos los cursos</button>
+    </div> `
+}
+function mostrar1() {
+    topSection.innerHTML = `
+    <ul>
+        <h6>Oficios</h6>
+        <a href="."><li>Transformación Digital</li></a>
+        <a href="."><li>Facebook Ads</li></a>
+        <a href="."><li>Google Ads</li></a>
+        <a href="."><li>Microsoft Office</li></a>
+    </ul>
+    <ul>
+        <a><li> </li></a><br>
+        <a href="."><li>Programación en HTML</li></a>
+        <a href="."><li>Criptomonedas</li></a>
+    </ul>
+    <div class="button-verCursos">
+        <button class='btn btn-dark'>Ver todos los cursos</button>
+    </div> `
+}
+function mostrar2() {
+    topSection.innerHTML = `
+    <ul>
+        <h6>Electrónica</h6>
+        <a href="."><li>Transformación Digital</li></a>
+        <a href="."><li>Facebook Ads</li></a>
+        <a href="."><li>Google Ads</li></a>
+        <a href="."><li>Microsoft Office</li></a>
+    </ul>
+    <ul>
+        <a><li> </li></a><br>
+        <a href="."><li>Programación en HTML</li></a>
+        <a href="."><li>Criptomonedas</li></a>
+    </ul>
+    <div class="button-verCursos">
+        <button class='btn btn-dark'>Ver todos los cursos</button>
+    </div> `
+}
+function mostrar3() {
+    topSection.innerHTML = `
+    <ul>
+        <h6>Salud</h6>
+        <a href="."><li>Transformación Digital</li></a>
+        <a href="."><li>Facebook Ads</li></a>
+        <a href="."><li>Google Ads</li></a>
+        <a href="."><li>Microsoft Office</li></a>
+    </ul>
+    <ul>
+        <a><li> </li></a><br>
+        <a href="."><li>Programación en HTML</li></a>
+        <a href="."><li>Criptomonedas</li></a>
+    </ul>
+    <div class="button-verCursos">
+        <button class='btn btn-dark'>Ver todos los cursos</button>
+    </div> `
+}
+function mostrar4() {
+    topSection.innerHTML = `
+    <ul>
+        <h6>Estética</h6>
+        <a href="."><li>Transformación Digital</li></a>
+        <a href="."><li>Facebook Ads</li></a>
+        <a href="."><li>Google Ads</li></a>
+        <a href="."><li>Microsoft Office</li></a>
+    </ul>
+    <ul>
+        <a><li> </li></a><br>
+        <a href="."><li>Programación en HTML</li></a>
+        <a href="."><li>Criptomonedas</li></a>
+    </ul>
+    <div class="button-verCursos">
+        <button class='btn btn-dark'>Ver todos los cursos</button>
+    </div> `
+}
+function mostrar5() {
+    topSection.innerHTML = `
+    <ul>
+        <h6>Electricidad</h6>
+        <a href="."><li>Transformación Digital</li></a>
+        <a href="."><li>Facebook Ads</li></a>
+        <a href="."><li>Google Ads</li></a>
+        <a href="."><li>Microsoft Office</li></a>
+    </ul>
+    <ul>
+        <a><li> </li></a><br>
+        <a href="."><li>Programación en HTML</li></a>
+        <a href="."><li>Criptomonedas</li></a>
+    </ul>
+    <div class="button-verCursos">
+        <button class='btn btn-dark'>Ver todos los cursos</button>
+    </div> `
+}
+function mostrar6() {
+    topSection.innerHTML = `
+    <ul>
+        <h6>Mecánica</h6>
+        <a href="."><li>Transformación Digital</li></a>
+        <a href="."><li>Facebook Ads</li></a>
+        <a href="."><li>Google Ads</li></a>
+        <a href="."><li>Microsoft Office</li></a>
+    </ul>
+    <ul>
+        <a><li> </li></a><br>
+        <a href="."><li>Programación en HTML</li></a>
+        <a href="."><li>Criptomonedas</li></a>
+    </ul>
+    <div class="button-verCursos">
+        <button class='btn btn-dark'>Ver todos los cursos</button>
+    </div> `
+}
+function mostrar7() {
+    topSection.innerHTML = `
+    <ul>
+        <h6>Economía</h6>
+        <a href="."><li>Transformación Digital</li></a>
+        <a href="."><li>Facebook Ads</li></a>
+        <a href="."><li>Google Ads</li></a>
+        <a href="."><li>Microsoft Office</li></a>
+    </ul>
+    <ul>
+        <a><li> </li></a><br>
+        <a href="."><li>Programación en HTML</li></a>
+        <a href="."><li>Criptomonedas</li></a>
+    </ul>
+    <div class="button-verCursos">
+        <button class='btn btn-dark'>Ver todos los cursos</button>
+    </div> `
+}
+function mostrar8() {
+    topSection.innerHTML = `
+    <ul>
+        <h6>Cursos Rápidos y Certificados</h6>
+        <a href="."><li>Transformación Digital</li></a>
+        <a href="."><li>Facebook Ads</li></a>
+        <a href="."><li>Google Ads</li></a>
+        <a href="."><li>Microsoft Office</li></a>
+    </ul>
+    <ul>
+        <a><li> </li></a><br>
+        <a href="."><li>Programación en HTML</li></a>
+        <a href="."><li>Criptomonedas</li></a>
+    </ul>
+    <div class="button-verCursos">
+        <button class='btn btn-dark'>Ver todos los cursos</button>
+    </div> `
+}

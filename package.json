@@ -1,31 +1,5 @@
 {
-  "name": "tooeshop_nuevo",
-  "description": "Actualización de pagina tooEshop",
-  "version": "1.0.0",
-  "main": "apiMercadopago.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npx nodemon apiMercadopago"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lucasezequielriera/tooeshop_nuevo.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mercadopago": "^1.5.7",
-    "sweetalert": "^2.1.2",
-    "sweetalert2": "^10.16.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  },
-  "bugs": {
-    "url": "https://github.com/lucasezequielriera/tooeshop_nuevo/issues"
-  },
-  "homepage": "https://github.com/lucasezequielriera/tooeshop_nuevo#readme"
+    "jquery": "^3.6.0"
+  }
 }
