@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido/a a Escuelas IADE</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Escuelas IADE IT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="shortcut icon" href="./favicon.png"/>
 </head>
+
 <body>
     <!-- Modal Window -->
     <div id="modal" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: transparent; z-index: -1; transition: all .5s;"></div>
@@ -16,7 +19,7 @@
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html"><img src="./images/logo.png" alt="logo_iade"></a>
+                <a class="navbar-brand" href="https://www.escuelasiade.com"><img src="./images/logo.png" alt="logo_iade"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -77,263 +80,113 @@
             </div>
         </nav>
     </header>
-    
-    <main id="main">
-        <div class="portada"></div>
-        <div class="pie-de-portada"></div>
+
+    <main id="main" class="main">
+        <div class="top-part">
+            <div class="left-part part col">
+                <h1>Escuelas <span class="iade">iade</span> <span class="it">IT</span></h1>
+                <p>Marketing y Tecnología</p>
+
+
+            </div>
+            <div class="right-part part col">
+                <img src="./images/1.png" class="d-block w-100" alt="imagen">
+                <img src="./images/2.png" class="d-block w-100" alt="imagen">
+            </div>
+        </div>
+
+        <div class="middle-part">
+            <div class="card">
+                <div class="icono">
+                    <img src="./images/diploma.png" alt="diploma">
+                </div>
+                <div class="informacion">
+                    <h5>Certificacion Nacional e Internacional
+                        <!-- <a href="#">Hola</a> -->
+                    </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icono">
+                    <img src="./images/university.png" alt="diploma">
+                </div>
+                <div class="informacion">
+                    <h5>Avalados por España y Estados Unidos</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icono">
+                    <img src="./images/campus.png" alt="diploma">
+                </div>
+                <div class="informacion">
+                    <h5>Campus virtual para tu enseñanza</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icono">
+                    <img src="./images/horario.png" alt="diploma">
+                </div>
+                <div class="informacion">
+                    <h5>Horarios flexibles a tu ritmo</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-part">
+            <div class="right-part part">
+                <div class="container-courses">
+                    <a href="#">
+                        <div class="course">
+                            <span class="badge bg-success">Nuevo curso</span>
+                            <span class="badge bg-primary text-white">Certificación Internacional</span>
+                            <p>Transformación Digital</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="course">
+                            <span class="badge bg-warning text-dark">Promoción especial</span>
+                            <p>HTML</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="course">
+                            <p>Facebook Ads</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="course">
+                            <span class="badge bg-success">Nuevo curso</span>
+                            <p>Criptomonedas</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="course">
+                            <p>Google Ads</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="course">
+                            <p>Microsoft Office</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
     </main>
 
-    <section id="escuelas">
-        <div class="titulo">
-            <h1>Conocé nuestras escuelas y estudiá lo que te gusta</h1>
-        </div>
-        <div class="part">
-            <div class="container-escuelas"></div>
-        </div>
-    </section>
-
-    <section id="slider-iconos">
-        <!-- Temporal hasta agregar logos e iconos verdaderos -->
-        <div class="card">
-            <div class="icono">
-                <img src="./images/diploma.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/university.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/campus.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/horario.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/diploma.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/university.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/campus.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/horario.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/diploma.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/university.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/campus.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/horario.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/diploma.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/university.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/campus.png" alt="diploma">
-            </div>
-        </div>
-        <div class="card">
-            <div class="icono">
-                <img src="./images/horario.png" alt="diploma">
-            </div>
-        </div>
-        <!-- / Temporal -->
-    </section>
-
-    <section id="institucional">
-        <div class="titulo">
-            <h1>Nuestra institución, tu lugar de aprendizaje</h1>
-        </div>
-        <div class="nuestra-informacion">
-            <div class="top-part">
-                <div class="left-content">
-                    <img src="./images/fondo.jpg" alt="imagen">
-                </div>
-                <div class="right-content">
-                    <div class="titulo">
-                        <h2>Nuestra historia desde los comienzos</h2>
-                    </div>
-                    <div class="texto">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, cupiditate accusamus. Et cupiditate officiis accusamus minima. Velit aperiam tempore, quaerat repellendus quis qui ducimus obcaecati minus delectus magnam nemo doloremque.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-part">
-                <div class="left-content">
-                    <div class="titulo">
-                        <h2>Nuestros alumnos cuentan la historia por nosotros</h2>
-                    </div>
-                    <div class="texto">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae iste, veniam eum, nisi illum sed totam tempore id exercitationem consequuntur aperiam necessitatibus aliquid explicabo excepturi quibusdam, culpa quod modi!</p>
-                    </div>
-                </div>
-                <div class="right-content">
-                    <img src="./images/fondo.jpg" alt="imagen">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="slider-valoraciones">
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer id="footer">
-        <div class="left-part">
-            <p><a href="#">Términos de Uso</a></p>
-            <p><a href="#">Preguntar Frecuentes</a></p>
-            <p><a href="#">Protección de Datos Personales</a></p>
-        </div>
-        <div class="right-part">
-            <p>All Right Reserved 2021 | Designed & Engineered by <span>Agrowd</span></p>
+        <button class="btn btn-dark btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img src="./images/carrito.png" width="20px">
+            <span class="badge bg-danger">0</span></button>
+
+        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Este es tu carrito de compras</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body small">
+                <p>Por ahora no tienes ningún producto en tu carrito</p>
+            </div>
         </div>
     </footer>
 
@@ -346,4 +199,5 @@
     <!-- JS Styles -->
     <script src="./js/index.js"></script>
 </body>
+
 </html>
