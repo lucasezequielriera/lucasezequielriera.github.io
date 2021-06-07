@@ -60,7 +60,7 @@ let capturarDatos = new Promise((resolve, reject) => {
         } else {
             reject(console.log("Algo falló en la lectura de datos en JSON"));
         }
-    }, 1000);
+    }, 500);
 
 });
 
@@ -338,7 +338,7 @@ setTimeout(() => {
         containerEscuelas.appendChild(a);
     });
 
-}, 1050)
+}, 1500)
 
 /////----- / Navbar -----/////
 
