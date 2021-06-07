@@ -1,0 +1,40 @@
+[
+    {
+        "IT": [{
+            "Url": "escuelas_iade_it/index.html",
+            "Cursos": ["Transformación Digital", "HTML", "Facebook Ads", "Criptomonedas", "Google Ads", "Microsoft Office"]
+        }],
+        "Oficios": [{
+            "Url": "escuelas_iade_oficios/index.html",
+            "Cursos": ["Oficios", "HTML", "Facebook Ads", "Criptomonedas", "Google Ads", "Microsoft Office"]
+        }],
+        "Electrónica": [{
+            "Url": "escuelas_iade_electronica/index.html",
+            "Cursos": ["Electrónica", "HTML", "Facebook Ads", "Criptomonedas", "Google Ads", "Microsoft Office"]
+        }],
+        "Salud": [{
+            "Url": "escuelas_iade_salud/index.html",
+            "Cursos": ["Salud", "HTML", "Facebook Ads", "Criptomonedas", "Google Ads", "Microsoft Office"]
+        }],
+        "Estética": [{
+            "Url": "escuelas_iade_estetica/index.html",
+            "Cursos": ["Estética", "HTML", "Facebook Ads", "Criptomonedas", "Google Ads", "Microsoft Office"]
+        }],
+        "Electricidad": [{
+            "Url": "escuelas_iade_electricidad/index.html",
+            "Cursos": ["Electricidad", "HTML", "Facebook Ads", "Criptomonedas", "Google Ads", "Microsoft Office"]
+        }],
+        "Mecánica": [{
+            "Url": "escuelas_iade_macanica/index.html",
+            "Cursos": ["Mecánica", "HTML", "Facebook Ads", "Criptomonedas", "Google Ads", "Microsoft Office"]
+        }],
+        "Economía": [{
+            "Url": "escuelas_iade_economia/index.html",
+            "Cursos": ["Economía", "HTML", "Facebook Ads", "Criptomonedas", "Google Ads", "Microsoft Office"]
+        }],
+        "Cursos TEMPO": [{
+            "Url": "escuelas_iade_tempo/index.html",
+            "Cursos": ["TEMPO", "HTML", "Facebook Ads", "Criptomonedas", "Google Ads", "Microsoft Office"]
+        }]
+    }
+]
