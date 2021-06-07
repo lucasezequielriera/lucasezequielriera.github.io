@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'system-ui';
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 0;
+    #header {
+        .navbar {
+            box-shadow: 0px 0px 10px rgb(187, 187, 187);
+            padding: 3px;
+            .container-fluid {
+                .navbar-brand {
+                    img {
+                        width: 80px;
+                    }
+                }
+                .navbar-collapse {
+                    .navbar-nav {
+                        .nav-item {
+                            margin: 0px 5px;
+                            align-self: center;
+                            .dropdown-menu {
+                                width: 700px;
+                                height: 400px;
+                                padding: 0px;
+                                top: 50px;
+                                box-shadow: 0px 0px 30px rgb(135, 135, 135);
+                                .container-dropdown {
+                                    width: 700px;
+                                    height: 400px;
+                                    display: flex;
+                                    flex-flow: row nowrap;
+                                    .left-part-dropdown {
+                                        width: 200px;
+                                        height: 399px;
+                                        border-right: 1px solid grey;
+                                        overflow-x: hidden;
+                                        .container-scroll {
+                                            overflow-x: scroll;
+                                            width: 100%;
+                                            height: 396px;
+                                            li {
+                                                text-transform: uppercase;
+                                                font-size: 13px;
+                                                .dropdown-item {
+                                                    width: 98%;
+                                                    height: 50px;
+                                                    background-color: whitesmoke;
+                                                    margin: 0 auto;
+                                                    margin-top: 2px;
+                                                    padding: 6px 5px;
+                                                    transition: all .2s;
+                                                    font-weight: 600;
+                                                    span {
+                                                        font-size: 10px;
+                                                        font-weight: 300;
+                                                    }
+                                                }
+                                                .dropdown-item:hover {
+                                                    background-color: rgb(192, 0, 0);
+                                                    color: white;
+                                                    transform: translateX(10px)
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .right-part-dropdown {
+                                        width: calc(700px - 200px);
+                                        height: 400px;
+                                        display: flex;
+                                        flex-flow: column nowrap;
+                                        justify-content: space-evenly;
+                                        .container-information-top {
+                                            display: flex;
+                                            flex-flow: row nowrap;
+                                            width: 98%;
+                                            height: 79%;
+                                            border: 1px solid rgb(213, 213, 213);
+                                            margin: 0 auto;
+                                            border-radius: 5px;
+                                            padding: 30px;
+                                            text-align: center;
+                                            justify-content: space-evenly;
+                                            position: relative;
+                                            ul {
+                                                list-style: none;
+                                                padding: 0px;
+                                                display: flex;
+                                                flex-flow: column nowrap;
+                                                align-items: flex-start;
+                                                h6 {
+                                                    font-weight: 700;
+                                                    text-decoration: underline;
+                                                }
+                                                a {
+                                                    color: black;
+                                                    text-decoration: none;
+                                                    border-radius: 5px;
+                                                    margin: 0px 1px;
+                                                    font-weight: 300;
+                                                    li {
+                                                        border: 1px solid transparent;
+                                                        margin: 0px 0px;
+                                                        padding: 0px;
+                                                        border-radius: 5px;
+                                                        transition: all .2s;                                     
+                                                    }
+                                                    li:hover {
+                                                        color: rgb(182, 0, 0);
+                                                    }
+                                                }
+                                            }
+                                            .button-verCursos {
+                                                position: absolute;
+                                                bottom: 0;
+                                                left: 0;
+                                                right: 0;
+                                                button {
+                                                    width: 100%;
+                                                }
+                                            }
+                                            
+                                        }
+                                        .container-information-bottom {
+                                            width: 98%;
+                                            height: 18%;
+                                            background-color: rgb(192, 0, 0);
+                                            margin: 0 auto;
+                                            border-radius: 5px;
+                                            overflow: hidden;
+                                            .container-images {
+                                                display: flex;
+                                                flex-flow: row nowrap;
+                                                animation: miniSlider 30s infinite alternate linear;
+                                                img {
+                                                    width: 30px;
+                                                    height: 30px;
+                                                    margin: 20px 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .nav-item:first-child {
+                            a {
+                                padding-left: 0px;
+                            }
+                        }
+                        .nav-item:last-child {
+                            a {
+                                padding: 7.5px 15px;
+                                text-decoration: bold;
+                                margin-left: 7.5px;
+                            }
+                        }
+                    }
+                    form {
+                        white-space: nowrap;
+                        transition: all .5s;
+                    }
+                }
+            }
+        }
+    }
+    
+    #main {
+        display: flex;
+        flex-flow: column nowrap;
+        height: calc(100% - 56px - 50px);
+        z-index: 0;
+        .top-part {
+            width: 100%;
+            height: calc(50%);
+            display: flex;
+            flex-flow: row nowrap;
+            .left-part {
+                font-weight: 15px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    margin: 0px;
+                    color: rgb(31, 31, 31);
+                    font-weight: 500;
+                    letter-spacing: -4px;
+                    font-size: 80px;
+                    .iade {
+                        animation: oscilarIade 5s infinite alternate;
+                        letter-spacing: -7px;
+                    }
+                    .it {
+                        color: rgb(209, 0, 0);
+                        font-size: 180px;
+                        font-weight: 300;
+                        letter-spacing: -14px;
+                        animation: oscilarIt 5s infinite alternate;
+                    }
+                }
+                p {
+                    margin-top: -40px;
+                    margin-left: -378px;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                h5 {
+                    color: rgb(114, 114, 114);
+                    border-left: 2px solid red;
+                    padding-left: 10px;
+                    font-weight: 300;
+                    font-size: 19px;
+                    letter-spacing: -1px;
+                    text-align: start;
+                    width: 80%;
+                    margin: auto;
+                }
+                button {
+                    width: 80%;
+                }
+            }
+            .right-part {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                align-self: center;
+                overflow: hidden;
+                img {
+                    animation: slider 20s infinite linear;
+                }
+            }
+        }
+        .middle-part {
+            max-width: 100%;
+            min-height: 80px;
+            max-height: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: rgb(197, 0, 0);
+            box-shadow: 0px 0px 20px rgb(107, 107, 107);
+            .card {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                background-color: transparent;
+                border: none;
+                .icono {
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    padding-top: 10px;
+                    margin-right: 2px;
+                    img {
+                        width: 30px;
+                    }
+                }
+                .informacion {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    // flex-flow: column nowrap;
+                    h5 {
+                        color: white;
+                        margin: 0px;
+                        padding: 0px 5px;
+                        line-height: 49px;
+                        font-weight: 300;
+                        font-size: 18px;
+                        align-self: center;
+                        border-left: 1px solid rgb(226, 226, 226);
+                    }
+                }
+            }
+        }
+        .bottom-part {
+            width: 100%;
+            height: calc(50%);
+            display: flex;
+            flex-flow: row nowrap;
+            .right-part {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                .container-courses {
+                    display: flex;
+                    flex-flow: row wrap;
+                    flex: auto;
+                    justify-content: space-evenly;
+                    align-content: space-evenly;
+                    a {
+                        border-radius: 5px;
+                        .course {
+                            border: 1px solid none;
+                            width: 400px;
+                            height: 100px;
+                            box-shadow: 5px 5px 10px rgb(114, 114, 114);
+                            border-radius: 5px;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            position: relative;
+                            z-index: 1;
+                            border-radius: 5px;
+                            overflow: hidden;
+                            .badge:first-child {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                font-weight: 500;
+                                font-size: 12px;
+                            }
+                            .badge:nth-child(2) {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                font-weight: 600;
+                                font-size: 12px;
+                            }
+                            p {
+                                color: white;
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                margin: 0px 10px 5px 0px;
+                                font-size: 20px;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                            }
+                        }
+                        .course::after {
+                            background: rgba(0, 0, 0, 0.658);
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            z-index: -1;
+                            border-radius: 5px;
+                            transition: all .2s;
+                        }
+                    }
+                    a:nth-child(1) .course {
+                        background-image:url('../images/transformacion-digital.jpeg');
+                    }
+                    a:nth-child(2) .course {
+                        background-image:url('../images/curso-html.png');
+                    }
+                    a:nth-child(3) .course {
+                        background-image:url('../images/facebook-ads.png');
+                    }
+                    a:nth-child(4) .course {
+                        background-image:url('../images/criptomonedas.jpeg');
+                    }
+                    a:nth-child(5) .course {
+                        background-image:url('../images/google-ads.jpeg');
+                    }
+                    a:nth-child(6) .course {
+                        background-image:url('../images/curso-office.png');
+                    }
+
+                    a:hover .course p{
+                        animation: mostrarPalabra .3s;
+                        text-shadow: 0px 0px 5px black;
+                    }
+                    a:hover .course::after {
+                        background-color: rgba(0, 0, 0, 0.253);
+                    }
+                }
+            }
+        }
+        .part {
+            text-align: center;
+        }
+    }
+
+    #footer {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        .btn-cart {
+            position: relative;
+            width: 80px;
+            span {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        .offcanvas {
+            background-color: rgb(255, 255, 255);
+            border: 1px solid white;
+            height: 110px;
+            .offcanvas-header {
+                .offcanvas-title {
+                    font-weight: 400;
+                }
+            }
+            .offcanvas-body {}
+        }
+    }
+}
+
+// Keyframes //
+@keyframes oscilarIade {
+    0% {
+        color: rgb(228, 3, 3);
+    }
+    100% {
+        color: transparent;
+    }
+}
+@keyframes oscilarIt {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: rgb(228, 3, 3);
+        margin-left: -100px;
+    }
+}
+@keyframes mostrarPalabra {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes slider {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform: translateX(-700px);
+    }
+}
+@keyframes miniSlider {
+    from {
+        transform: translateX(400px);
+    }
+    to {
+        transform: translateX(-300px);
+    }
+}

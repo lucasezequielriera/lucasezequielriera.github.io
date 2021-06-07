@@ -10,13 +10,13 @@ html {
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: whitesmoke;
   position: relative;
   z-index: 0;
 }
 body #header .navbar {
-  box-shadow: 0px 0px 10px #bbbbbb;
+  box-shadow: 0px 0px 10px #818181;
   padding: 3px;
 }
 body #header .navbar .container-fluid .navbar-brand img {
@@ -161,107 +161,77 @@ body #header .navbar .container-fluid .navbar-collapse form {
   transition: all 0.5s;
 }
 body #main {
-  display: flex;
-  flex-flow: column nowrap;
-  height: calc(100% - 56px - 50px);
-  z-index: 0;
-}
-body #main .top-part {
   width: 100%;
-  height: calc(50%);
-  display: flex;
-  flex-flow: row nowrap;
+  height: calc(100% - 56.66px);
 }
-body #main .top-part .left-part {
-  font-weight: 15px;
+body #main .portada {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../images/fondo.jpg");
+  background-position-y: -20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+body #main .portada .container-imagen {
+  width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body #main .top-part .left-part h1 {
-  margin: 0px;
-  color: #1f1f1f;
-  font-weight: 500;
-  letter-spacing: -4px;
-  font-size: 80px;
+body #main .portada .container-imagen img {
+  width: 300px;
+  height: 150px;
 }
-body #main .top-part .left-part h1 .iade {
-  animation: oscilarIade 5s infinite alternate;
-  letter-spacing: -7px;
-}
-body #main .top-part .left-part h1 .it {
-  color: #d10000;
-  font-size: 180px;
-  font-weight: 300;
-  letter-spacing: -14px;
-  animation: oscilarIt 5s infinite alternate;
-}
-body #main .top-part .left-part p {
-  margin-top: -40px;
-  margin-left: -378px;
-  font-size: 14px;
-  font-weight: 500;
-}
-body #main .top-part .left-part h5 {
-  color: #727272;
-  border-left: 2px solid red;
-  padding-left: 10px;
-  font-weight: 300;
-  font-size: 19px;
-  letter-spacing: -1px;
-  text-align: start;
-  width: 80%;
-  margin: auto;
-}
-body #main .top-part .left-part button {
-  width: 80%;
-}
-body #main .top-part .right-part {
+body #main .portada::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  align-self: center;
-  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.377);
+  z-index: -1;
 }
-body #main .top-part .right-part img {
-  animation: slider 20s infinite linear;
-}
-body #main .middle-part {
-  max-width: 100%;
-  min-height: 80px;
-  max-height: 200px;
+body #main .pie-de-portada {
+  width: 100%;
+  height: calc(20vh - 56.66px);
+  background: #8e0000;
+  background: linear-gradient(0deg, #8e0000 0%, #b00202 30%, #aa0002 71%, #900000 100%);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.322);
   display: flex;
   justify-content: space-evenly;
-  background-color: #c50000;
-  box-shadow: 0px 0px 20px #6b6b6b;
 }
-body #main .middle-part .card {
+body #main .pie-de-portada .card {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   background-color: transparent;
   border: none;
 }
-body #main .middle-part .card .icono {
+body #main .pie-de-portada .card .icono {
   width: 50px;
   height: 50px;
   text-align: center;
   padding-top: 10px;
   margin-right: 2px;
+  overflow: hidden;
 }
-body #main .middle-part .card .icono img {
+body #main .pie-de-portada .card .icono img {
   width: 30px;
+  animation: mostrarIcono 1s;
 }
-body #main .middle-part .card .informacion {
+body #main .pie-de-portada .card .informacion {
   width: 100%;
   height: 100%;
   display: flex;
+  overflow: hidden;
 }
-body #main .middle-part .card .informacion h5 {
+body #main .pie-de-portada .card .informacion h5 {
   color: white;
   margin: 0px;
   padding: 0px 5px;
@@ -270,31 +240,49 @@ body #main .middle-part .card .informacion h5 {
   font-size: 18px;
   align-self: center;
   border-left: 1px solid #e2e2e2;
+  animation: mostrarTexto 1s;
 }
-body #main .bottom-part {
+body #escuelas {
   width: 100%;
-  height: calc(50%);
+  height: 400px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
 }
-body #main .bottom-part .right-part {
+body #escuelas .titulo {
+  margin: 50px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+body #escuelas .titulo h1 {
+  font-weight: 300;
+  padding: 5px 20px 5px 20px;
+  width: auto;
+  border-radius: 5px;
+  letter-spacing: -2px;
+  color: #ce0202;
+  font-size: 40px;
+  text-shadow: 0px 0px 20px #d4d4d4;
+  border: 2px solid #ce0202;
+}
+body #escuelas .part {
   display: flex;
   width: 100%;
   height: 100%;
+  justify-content: center;
 }
-body #main .bottom-part .right-part .container-courses {
+body #escuelas .part .container-escuelas {
   display: flex;
   flex-flow: row wrap;
-  flex: auto;
-  justify-content: space-evenly;
+  justify-content: center;
   align-content: space-evenly;
 }
-body #main .bottom-part .right-part .container-courses a {
+body #escuelas .part .container-escuelas a {
   border-radius: 5px;
 }
-body #main .bottom-part .right-part .container-courses a .course {
+body #escuelas .part .container-escuelas a .escuela {
   border: 1px solid none;
-  width: 400px;
+  width: 200px;
   height: 100px;
   box-shadow: 5px 5px 10px #727272;
   border-radius: 5px;
@@ -305,32 +293,36 @@ body #main .bottom-part .right-part .container-courses a .course {
   z-index: 1;
   border-radius: 5px;
   overflow: hidden;
+  margin: 10px 10px;
 }
-body #main .bottom-part .right-part .container-courses a .course .badge:first-child {
+body #escuelas .part .container-escuelas a .escuela .badge:first-child {
   position: absolute;
   top: 0;
   left: 0;
   font-weight: 500;
   font-size: 12px;
 }
-body #main .bottom-part .right-part .container-courses a .course .badge:nth-child(2) {
+body #escuelas .part .container-escuelas a .escuela .badge:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
   font-weight: 600;
   font-size: 12px;
 }
-body #main .bottom-part .right-part .container-courses a .course p {
+body #escuelas .part .container-escuelas a .escuela p {
   color: white;
   position: absolute;
-  bottom: 0;
+  bottom: 35%;
+  top: 35%;
   right: 0;
-  margin: 0px 10px 5px 0px;
+  left: 0;
+  text-align: center;
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0px;
 }
-body #main .bottom-part .right-part .container-courses a .course::after {
+body #escuelas .part .container-escuelas a .escuela::after {
   background: rgba(0, 0, 0, 0.658);
   content: "";
   position: absolute;
@@ -342,71 +334,331 @@ body #main .bottom-part .right-part .container-courses a .course::after {
   border-radius: 5px;
   transition: all 0.2s;
 }
-body #main .bottom-part .right-part .container-courses a:nth-child(1) .course {
+body #escuelas .part .container-escuelas a:nth-child(1) .escuela {
   background-image: url("../images/transformacion-digital.jpeg");
 }
-body #main .bottom-part .right-part .container-courses a:nth-child(2) .course {
+body #escuelas .part .container-escuelas a:nth-child(2) .escuela {
   background-image: url("../images/curso-html.png");
 }
-body #main .bottom-part .right-part .container-courses a:nth-child(3) .course {
+body #escuelas .part .container-escuelas a:nth-child(3) .escuela {
   background-image: url("../images/facebook-ads.png");
 }
-body #main .bottom-part .right-part .container-courses a:nth-child(4) .course {
+body #escuelas .part .container-escuelas a:nth-child(4) .escuela {
   background-image: url("../images/criptomonedas.jpeg");
 }
-body #main .bottom-part .right-part .container-courses a:nth-child(5) .course {
+body #escuelas .part .container-escuelas a:nth-child(5) .escuela {
   background-image: url("../images/google-ads.jpeg");
 }
-body #main .bottom-part .right-part .container-courses a:nth-child(6) .course {
+body #escuelas .part .container-escuelas a:nth-child(6) .escuela {
   background-image: url("../images/curso-office.png");
 }
-body #main .bottom-part .right-part .container-courses a:hover .course p {
+body #escuelas .part .container-escuelas a:nth-child(7) .escuela {
+  background-image: url("../images/criptomonedas.jpeg");
+}
+body #escuelas .part .container-escuelas a:nth-child(8) .escuela {
+  background-image: url("../images/google-ads.jpeg");
+}
+body #escuelas .part .container-escuelas a:nth-child(9) .escuela {
+  background-image: url("../images/curso-office.png");
+}
+body #escuelas .part .container-escuelas a:hover .escuela p {
   animation: mostrarPalabra 0.3s;
   text-shadow: 0px 0px 5px black;
 }
-body #main .bottom-part .right-part .container-courses a:hover .course::after {
+body #escuelas .part .container-escuelas a:hover .escuela::after {
   background-color: rgba(0, 0, 0, 0.253);
 }
-body #main .part {
+body #slider-iconos {
+  width: 100%;
+  height: calc(20vh - 56.66px);
+  background: #8e0000;
+  background: linear-gradient(0deg, #8e0000 0%, #b00202 30%, #aa0002 71%, #900000 100%);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.322);
+  margin: 50px 0px;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+body #slider-iconos .card {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  animation: slider 30s infinite linear;
+}
+body #slider-iconos .card .icono {
+  width: 50px;
+  height: 50px;
   text-align: center;
+  padding-top: 10px;
+  margin-right: 2px;
+  overflow: hidden;
+  margin: 0px 10px;
+}
+body #slider-iconos .card .icono img {
+  width: 30px;
+}
+body #institucional {
+  width: 100%;
+}
+body #institucional .titulo {
+  margin: 50px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+body #institucional .titulo h1 {
+  font-weight: 300;
+  padding: 5px 20px 5px 20px;
+  width: auto;
+  border-radius: 5px;
+  letter-spacing: -2px;
+  color: #ce0202;
+  font-size: 40px;
+  text-shadow: 0px 0px 20px #d4d4d4;
+  border: 2px solid #ce0202;
+}
+body #institucional .nuestra-informacion {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+body #institucional .nuestra-informacion .top-part {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+body #institucional .nuestra-informacion .top-part .left-content {
+  width: 35%;
+  height: 100%;
+  margin: 0px 5px;
+}
+body #institucional .nuestra-informacion .top-part .left-content img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.068);
+}
+body #institucional .nuestra-informacion .top-part .right-content {
+  width: 63%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0px 5px;
+}
+body #institucional .nuestra-informacion .top-part .right-content .titulo {
+  margin: 0px 0px 20px 0px;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+body #institucional .nuestra-informacion .top-part .right-content .titulo h2 {
+  margin: 0px;
+  padding: 10px 10px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  color: black;
+  text-align: left;
+}
+body #institucional .nuestra-informacion .top-part .right-content .texto {
+  height: 100%;
+  padding: 10px;
+}
+body #institucional .nuestra-informacion .top-part .right-content .texto p {
+  font-weight: 500;
+  font-size: 15px;
+}
+body #institucional .nuestra-informacion .bottom-part {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 5px;
+}
+body #institucional .nuestra-informacion .bottom-part .left-content {
+  width: 63%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0px 5px;
+}
+body #institucional .nuestra-informacion .bottom-part .left-content .titulo {
+  margin: 0px 0px 20px 0px;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+body #institucional .nuestra-informacion .bottom-part .left-content .titulo h2 {
+  margin: 0px;
+  padding: 10px 10px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  color: black;
+}
+body #institucional .nuestra-informacion .bottom-part .left-content .texto {
+  height: 100%;
+  padding: 10px;
+  text-align: right;
+}
+body #institucional .nuestra-informacion .bottom-part .left-content .texto p {
+  font-weight: 500;
+  font-size: 15px;
+}
+body #institucional .nuestra-informacion .bottom-part .right-content {
+  width: 35%;
+  height: 100%;
+  margin: 0px 5px;
+}
+body #institucional .nuestra-informacion .bottom-part .right-content img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 10px -10px 10px rgba(0, 0, 0, 0.068);
+}
+body #slider-valoraciones {
+  width: 100%;
+  height: 250px;
+  margin: 50px 0px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+body #slider-valoraciones .card-valoracion {
+  min-width: 400px;
+  width: 400px;
+  min-height: 200px;
+  height: 200px;
+  margin: 0px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  box-shadow: 0px 0px 20px #7a7a7a;
+  background: #8e0000;
+  background: linear-gradient(0deg, #8e0000 0%, #b00202 30%, #aa0002 71%, #900000 100%);
+  animation: sliderReputation 50s infinite linear;
+}
+body #slider-valoraciones .card-valoracion .left-part {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+}
+body #slider-valoraciones .card-valoracion .left-part img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+body #slider-valoraciones .card-valoracion .right-part {
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px;
+  color: white;
+}
+body #slider-valoraciones .card-valoracion .right-part .titulo h3 {
+  color: white;
+}
+body #slider-valoraciones .card-valoracion .right-part .titulo p {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-top: 5px;
+  color: whitesmoke;
+}
+body #slider-valoraciones .card-valoracion .right-part .titulo p img {
+  margin-right: 5px;
+}
+body #slider-valoraciones .card-valoracion .right-part .texto p {
+  font-weight: 500;
 }
 body #footer {
   width: 100%;
   height: 50px;
-  text-align: center;
+  background-color: whitesmoke;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
-body #footer .btn-cart {
-  position: relative;
-  width: 80px;
+body #footer .left-part {
+  width: 48%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
-body #footer .btn-cart span {
-  position: absolute;
-  top: 0;
-  right: 0;
+body #footer .left-part p {
+  margin: 0px;
+  padding: 5px;
 }
-body #footer .offcanvas {
-  background-color: white;
-  border: 1px solid white;
-  height: 110px;
+body #footer .left-part p a {
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #d30000;
+  transition: all 0.2s;
 }
-body #footer .offcanvas .offcanvas-header .offcanvas-title {
-  font-weight: 400;
+body #footer .left-part p a:hover {
+  background-color: whitesmoke;
+  color: #d30000;
+  border: 1px solid #d30000;
 }
-@keyframes oscilarIade {
+body #footer .right-part {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #footer .right-part p {
+  letter-spacing: 0px;
+  margin: 0px;
+}
+body #footer .right-part p span {
+  font-weight: 600;
+}
+
+@keyframes miniSlider {
+  from {
+    transform: translateX(400px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+@keyframes slider {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(-1000px);
+  }
+}
+@keyframes mostrarIcono {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes mostrarTexto {
   0% {
-    color: #e40303;
+    transform: translateX(-400px);
+  }
+  50% {
+    transform: translateX(-400px);
   }
   100% {
-    color: transparent;
-  }
-}
-@keyframes oscilarIt {
-  0% {
-    color: transparent;
-  }
-  100% {
-    color: #e40303;
-    margin-left: -100px;
+    transform: translateX(0px);
   }
 }
 @keyframes mostrarPalabra {
@@ -417,20 +669,12 @@ body #footer .offcanvas .offcanvas-header .offcanvas-title {
     transform: translateX(0px);
   }
 }
-@keyframes slider {
+@keyframes sliderReputation {
   from {
-    transform: translateX(200px);
+    transform: translateX(0px);
   }
   to {
-    transform: translateX(-700px);
-  }
-}
-@keyframes miniSlider {
-  from {
-    transform: translateX(400px);
-  }
-  to {
-    transform: translateX(-300px);
+    transform: translateX(-1000px);
   }
 }
 
